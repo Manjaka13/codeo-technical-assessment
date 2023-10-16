@@ -6,7 +6,3 @@
 		<div></div>
 	</div>
 </template>
-
-<script>
-import "@/styles/loading-spinner.css";
-</script>

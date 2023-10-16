@@ -1,0 +1,40 @@
+/**
+ * Footer styles
+ */
+
+.footer {
+    @include flex-col(center, center);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+
+    &__text {
+        margin-bottom: 20px;
+        color: $color-text1;
+        font-weight: bold;
+        .link {
+            text-decoration: none;
+            background: $color-theme2;
+            color: $color-text1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: all 200ms ease-in-out;
+            &:hover {
+                color: $color-theme2;
+                background: $color-text1;
+            }
+        }
+    }
+
+    &__logo {
+        width: 200px;
+    }
+
+    &__avatar {
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: 6px $color-theme2 solid;
+    }
+}

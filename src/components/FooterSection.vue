@@ -18,7 +18,3 @@
 		/>
 	</footer>
 </template>
-
-<script>
-import "@/styles/footer-section.css";
-</script>

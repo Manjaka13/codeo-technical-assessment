@@ -1,0 +1,36 @@
+/**
+ * Ellipsis loading spinner animation
+ */
+
+.loading-spinner {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+
+	div {
+		position: absolute;
+		top: 33px;
+		width: 13px;
+		height: 13px;
+		border-radius: 50%;
+		background: #fff;
+		animation-timing-function: cubic-bezier(0, 1, 1, 0);
+		&:nth-child(1) {
+			left: 8px;
+			animation: animEllipsis1 0.6s infinite;
+		}
+		&:nth-child(2) {
+			left: 8px;
+			animation: animEllipsis2 0.6s infinite;
+		}
+		&:nth-child(3) {
+			left: 32px;
+			animation: animEllipsis2 0.6s infinite;
+		}
+		&:nth-child(4) {
+			left: 56px;
+			animation: animEllipsis3 0.6s infinite;
+		}
+	}
+}
