@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import "@/styles/task-item.css";
-
 /**
  * This displays a single given task
  */

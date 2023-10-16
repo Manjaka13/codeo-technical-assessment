@@ -27,7 +27,7 @@
 }
 
 .task:hover {
-	background: #6f1ab6;
+	background: $color-theme2;
 }
 
 .task__head {
@@ -38,12 +38,12 @@
 
 .task__head .title {
 	font-size: 18px;
-	color: white;
+	color: $color-text1;
 	font-weight: normal;
 }
 
 .task__description {
-	color: #ffffff8a;
+	color: $color-text2;
 }
 
 .task__head .delete {
@@ -67,10 +67,10 @@
 }
 
 .task__head .delete:hover {
-	background: #312070;
+	background: $color-theme1;
 	transform: rotate3d(180deg, 180deg);
 }
 
 .task__head .button {
-    color: #ff0032;
+    color: $color-danger;
 }

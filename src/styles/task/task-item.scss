@@ -1,0 +1,60 @@
+/**
+ * Single task styles
+ */
+
+.task {
+    @include transition;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+
+    &--deleting {
+        animation: animDelete 300ms linear forwards;
+        pointer-events: none;
+    }
+
+    &__head {
+        @include flex-row(space-between, center);
+
+        .title {
+            font-size: 18px;
+            color: $color-text1;
+            font-weight: normal;
+        }
+
+        .delete {
+            @include flex-row(center, center);
+            @include transition(300ms);
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            margin-left: 20px;
+
+            :hover {
+                background: $color-theme1;
+                transform: rotate3d(180deg, 180deg);
+            }
+        }
+
+        .button {
+            color: $color-danger;
+        }
+    }
+
+    &__description {
+        color: $color-text1;
+    }
+
+    &:hover {
+        background: $color-theme2;
+
+        .delete {
+            pointer-events: auto;
+            opacity: 1;
+        }
+    }
+}
