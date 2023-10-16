@@ -1,0 +1,4 @@
+# Ignore files/folders for linting
+/.vscode
+/node_modules
+*.ico

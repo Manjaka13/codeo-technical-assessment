@@ -1,0 +1,5 @@
+# Ignore files/folders for formating
+/.vscode
+/node_modules
+*.ico
+package-lock.json

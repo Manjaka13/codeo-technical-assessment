@@ -1,0 +1,81 @@
+/**
+ * Styles for tasklist component
+ */
+
+.task-list {
+	width: 100%;
+    min-height: 100%;
+	border-radius: 10px;
+	backdrop-filter: blur(5px);
+	background: rgba(255, 255, 255, 0.07);
+	padding: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.task-list__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px #757575 solid;
+	padding-bottom: 10px;
+}
+
+.task-list__head .title {
+	color: white;
+	font-size: 30px;
+	position: relative;
+}
+
+@keyframes animRotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.task-list__head .title::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: #ff0032;
+	position: absolute;
+	top: 0;
+	right: -20px;
+	animation: animRotate 2s linear infinite;
+}
+
+.task-list__head .add {
+	color: white;
+	background: #312070;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.task-list__list {
+	list-style-type: none;
+    height: 100%;
+}
+
+.task-list__container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.task-list__container .info-text {
+    color: #ffffff8a;
+}
+
+.task-list__container .info-error {
+    color: #ff0032;
+}
+
+.task-list__box {
+    text-align: center;
+}
