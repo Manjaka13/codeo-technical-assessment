@@ -5,7 +5,7 @@ import axios from "axios";
  */
 
 const mockTaskListUrl =
-	"https://run.mocky.io/v3/9f9283e5-f983-402a-b701-bf7ba2896d9e";
+	"https://run.mocky.io/v3/65b6c189-5e26-4386-94c9-fcc95e396e3a";
 
 // Gets task list from run mocky
 export const getTaskList = () =>
