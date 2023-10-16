@@ -1,0 +1,27 @@
+/**
+ * Homepage styles
+ */
+
+.home-page {
+    @include flex-col(start, center);
+    height: 100%;
+
+    &__title {
+        font-size: 40px;
+        color: $color-danger;
+    }
+    
+    &__description {
+        color: $color-text1;
+    }
+
+    &__link {
+        text-decoration: none;
+        background: $color-theme2;
+        margin-top: 20px;
+        padding: 10px 20px;
+        color: $color-text1;
+        border: none;
+        border-radius: 5px;
+    }
+}

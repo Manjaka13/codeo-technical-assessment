@@ -1,11 +1,10 @@
 <template>
 	<main>
-		<task-list />
+		<router-view />
 	</main>
 	<footer-section />
 </template>
 
 <script setup>
-import TaskList from "@/components/Task/TaskList.vue";
 import FooterSection from "@/components/Page/FooterSection.vue";
 </script>
