@@ -38,6 +38,13 @@
             padding: 10px 20px;
             border-radius: 5px;
         }
+        .cancel {
+            color: $color-text1;
+            background: $color-danger;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
     }
 
     &__list {

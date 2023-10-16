@@ -1,0 +1,40 @@
+/**
+ * Styles for add task component
+ */
+
+.add-task {
+    text-align: center;
+
+    &__group {
+        @include flex-row(initial, center);
+        width: 100%;
+        background: $color-theme2;
+        border-radius: 5px;
+        margin: 2% 0;
+        height: 41px;
+        overflow: hidden;
+        .icon {
+            @include flex-row(center, center);
+            width: 41px;
+            height: 100%;
+            overflow: hidden;
+            color: white;
+        }
+        .input {
+            flex: 1;
+            height: 100%;
+            padding: 0 20px;
+            border: none;
+            background: $color-theme1;
+            color: white;
+        }
+    }
+
+    .submit {
+        padding: 10px 20px;
+        color: $color-text1;
+        border: none;
+        background: $color-theme2;
+        border-radius: 5px;
+    }
+}
