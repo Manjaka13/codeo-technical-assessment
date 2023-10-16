@@ -1,0 +1,85 @@
+/**
+ * General styles
+ */
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
+
+html,
+body,
+#app,
+main {
+    height: 100%;
+}
+
+body {
+    background: url(@/images/background-image.png) center center fixed no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+@keyframes fadeOutAnim {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+body::before {
+    content: "";
+    background-color: #312070;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    animation: fadeOutAnim 2s linear;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+html,
+body,
+#app,
+p,
+h1,
+h2,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+p,
+button,
+input,
+a {
+    font-size: 14px;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+#app {
+    user-select: none;
+}
+
+#app main {
+    padding: 40px;
+    width: 60%;
+    min-height: 100%;
+}
