@@ -15,6 +15,7 @@
         margin-bottom: 20px;
         color: $color-text1;
         font-weight: bold;
+
         .link {
             text-decoration: none;
             background: $color-theme2;
@@ -23,6 +24,7 @@
             border-radius: 3px;
             pointer-events: auto;
             transition: all 200ms ease-in-out;
+
             &:hover {
                 color: $color-theme2;
                 background: $color-text1;
@@ -38,5 +40,24 @@
         margin-bottom: 20px;
         border-radius: 50%;
         border: 6px $color-theme2 solid;
+    }
+
+    .lottie {
+        position: relative;
+        overflow: visible;
+
+        &::before {
+            content: "";
+            background: $color-theme2;
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.753);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            border-radius: 60%;
+        }
     }
 }

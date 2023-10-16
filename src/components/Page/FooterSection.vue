@@ -11,10 +11,21 @@
 				Harijaona</a
 			>.
 		</p>
-		<img
-			class="footer__logo"
-			src="@/images/logo-codeo.png"
-			alt="Codeo logo"
-		/>
+		<img class="footer__logo" src="@/images/logo-codeo.png" alt="Codeo logo" />
+		<Vue3Lottie class="lottie" :animationData="lottieCat" :height="100" />
 	</footer>
 </template>
+
+<script>
+import { Vue3Lottie } from "vue3-lottie";
+import lottieCat from "@/assets/lottie-cat.json";
+
+export default {
+	components: { Vue3Lottie },
+	data() {
+		return {
+			lottieCat,
+		};
+	},
+};
+</script>
