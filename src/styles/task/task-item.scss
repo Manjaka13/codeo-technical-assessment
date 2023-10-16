@@ -34,7 +34,7 @@
             pointer-events: none;
             margin-left: 20px;
 
-            :hover {
+            &:hover {
                 background: $color-theme1;
                 transform: rotate3d(180deg, 180deg);
             }

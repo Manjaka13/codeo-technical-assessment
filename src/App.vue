@@ -6,6 +6,6 @@
 </template>
 
 <script setup>
-import TaskList from "@/components/TaskList.vue";
-import FooterSection from "@/components/FooterSection.vue";
+import TaskList from "@/components/Task/TaskList.vue";
+import FooterSection from "@/components/Page/FooterSection.vue";
 </script>
