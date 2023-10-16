@@ -1,0 +1,15 @@
+/**
+ * Stores all our anims
+ */
+
+@keyframes animDelete {
+	from {
+		position: relative;
+		right: 0;
+	}
+	to {
+		position: relative;
+		right: -100%;
+		opacity: 0;
+	}
+}
