@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import "@/styles/task-list.css";
 import TaskItem from "@/components/TaskItem.vue";
 import LoadingSpinner from "@/components/LoadingSpinner.vue";
 import { getTaskList } from "@/helpers/http";

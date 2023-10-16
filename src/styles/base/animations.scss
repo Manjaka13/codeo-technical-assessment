@@ -2,6 +2,7 @@
  * Stores all our anims
  */
 
+// Delete animation
 @keyframes animDelete {
 	from {
 		position: relative;
@@ -12,4 +13,15 @@
 		right: -100%;
 		opacity: 0;
 	}
+}
+
+// Cube rotation anim
+@keyframes animRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
