@@ -3,8 +3,9 @@
  */
 
 .home-page {
-    @include flex-col(start, center);
+    @include flex-col(center, center);
     height: 100%;
+    text-align: center;
 
     &__title {
         font-size: 40px;
