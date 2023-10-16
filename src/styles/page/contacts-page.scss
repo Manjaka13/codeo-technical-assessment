@@ -1,0 +1,97 @@
+/**
+ * Contacts page styles
+ */
+
+.contacts {
+    @include flex-col(center, center);
+    background: linear-gradient(to right, #4113eb62, #701ab649);
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    backdrop-filter: blur(5px);
+
+    &__title {
+        color: $color-danger;
+        font-size: 40px;
+    }
+
+    .divider {
+        width: 200px;
+        height: 4px;
+        background: $color-text1;
+        margin: 20px 0;
+        border-radius: 2px;
+    }
+
+    &__form {
+        text-align: center;
+        .group {
+            @include flex-col(initial, initial);
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .label {
+            color: $color-text1;
+            margin-bottom: 5px;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        .input {
+            background: $color-theme1;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: $color-text1;
+        }
+        textarea:disabled,
+        input:disabled {
+            color: $color-text2;
+        }
+        .textarea  {
+            resize: none;
+            background: $color-theme1;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: $color-text1;
+            height: 80px;
+        }
+        .submit {
+            padding: 5px 20px;
+            background: $color-theme2;
+            color: $color-text1;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .success {
+            color: lime;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    
+    .arrow {
+        $size-1: 6px;
+        $size-2: 100px;
+        background: $color-text1;
+        position: absolute;
+        &--vertical {
+            width: $size-1;
+            height: $size-2;
+        }
+        &--horizontal {
+            width: $size-2;
+            height: $size-1;
+        }
+        &--top {
+            top: 0;
+            left: 0;
+        }
+        &--bottom {
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

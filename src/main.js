@@ -13,6 +13,9 @@ import {
 	faHome,
 	faPencilAlt,
 	faEnvelope,
+	faUser,
+	faMessage,
+	faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import router from "@/helpers/router.js";
 
@@ -23,7 +26,10 @@ library.add(
 	faTimesCircle,
 	faHome,
 	faPencilAlt,
-	faEnvelope
+	faEnvelope,
+	faUser,
+	faMessage,
+	faPaperPlane
 );
 
 /**
