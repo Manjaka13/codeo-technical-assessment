@@ -1,0 +1,54 @@
+/**
+ * Navbar styles
+ */
+
+.nav-bar {
+    @include flex-col(center, center);
+    position: relative;
+    overflow: hidden;
+
+    &__list {
+        @include flex-row(center, center);
+        list-style-type: none;
+        padding: 20px 0;
+        .item {
+            margin-left: 10px;
+            margin-right: 10px;
+            &:hover {
+                .link {
+                    color: $color-danger;
+                }
+            }
+        }
+        .link {
+            @include transition;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: $color-text1;
+            font-size: 20px;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    @keyframes animLine {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 70px;
+        height: 3px;
+        background: linear-gradient(to right, transparent, white);
+        animation: animLine infinite 5s linear forwards;
+        border-radius: 0 2px 2px 0;
+    }
+}

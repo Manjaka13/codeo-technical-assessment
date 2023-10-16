@@ -10,13 +10,28 @@ import {
 	faPlusCircle,
 	faList,
 	faTimesCircle,
+	faHome,
+	faPencilAlt,
+	faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import router from "@/helpers/router.js";
 
-library.add(faTrashAlt, faPlusCircle, faList, faTimesCircle);
+library.add(
+	faTrashAlt,
+	faPlusCircle,
+	faList,
+	faTimesCircle,
+	faHome,
+	faPencilAlt,
+	faEnvelope
+);
 
 /**
  * Entry point
  */
 
-createApp(App).use(router).use(store).component("font-icon", FontAwesomeIcon).mount("#app");
+createApp(App)
+	.use(router)
+	.use(store)
+	.component("font-icon", FontAwesomeIcon)
+	.mount("#app");

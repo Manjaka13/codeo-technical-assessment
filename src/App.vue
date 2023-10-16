@@ -1,4 +1,7 @@
 <template>
+	<header>
+		<nav-bar />
+	</header>
 	<main>
 		<router-view />
 	</main>
@@ -7,4 +10,5 @@
 
 <script setup>
 import FooterSection from "@/components/Page/FooterSection.vue";
+import NavBar from "@/components/Page/NavBar.vue";
 </script>

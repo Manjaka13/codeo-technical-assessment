@@ -69,6 +69,10 @@ a {
     font-size: 14px;
 }
 
+a {
+    text-decoration: none;
+}
+
 a,
 button {
     cursor: pointer;
@@ -76,10 +80,13 @@ button {
 
 #app {
     user-select: none;
+    display: flex;
+    flex-direction: column;
 }
 
 #app main {
     padding: 40px;
+    padding-top: 0;
     width: 60%;
-    min-height: 100%;
+    flex: 1;
 }

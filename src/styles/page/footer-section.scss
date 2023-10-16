@@ -9,6 +9,7 @@
     right: 0;
     height: 100%;
     width: 40%;
+    pointer-events: none;
 
     &__text {
         margin-bottom: 20px;
@@ -20,6 +21,7 @@
             color: $color-text1;
             padding: 2px 5px;
             border-radius: 3px;
+            pointer-events: auto;
             transition: all 200ms ease-in-out;
             &:hover {
                 color: $color-theme2;
