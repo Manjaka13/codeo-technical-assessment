@@ -33,7 +33,7 @@ body {
 
 body::before {
     content: "";
-    background-color: #312070;
+    background-color: $color-theme1;
     position: fixed;
     top: 0;
     left: 0;
