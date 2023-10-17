@@ -91,6 +91,7 @@ export default {
 		// Adds new task
 		addTask(task) {
 			this.$store.commit("addTask", task);
+			this.switchAddingTask();
 		},
 		// Remove task with given id
 		removeTask(id) {
