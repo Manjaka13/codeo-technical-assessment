@@ -1,11 +1,15 @@
 <template>
 	<div :class="`task${deleting ? ' task--deleting' : ''}`">
 		<div class="task__head">
+			<!-- Task title -->
 			<h2 class="title">{{ title }}</h2>
+			<!-- Delete button -->
 			<div class="delete" title="Delete this task" @click="handleDelete()">
 				<font-icon class="button" icon="fa-solid fa-trash-alt" />
 			</div>
 		</div>
+		
+		<!-- Task description -->
 		<p class="task__description">{{ description }}</p>
 	</div>
 </template>
@@ -29,7 +33,7 @@ export default {
 	methods: {
 		handleDelete() {
 			this.deleting = true;
-			// Delete the task after delete animation is completed (300ms)
+			// Delete the task only after delete animation is done
 			setTimeout(() => {
 				this.$emit("delete", this.id);
 				this.deleting = false;

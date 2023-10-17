@@ -1,6 +1,6 @@
 <template>
 	<form class="add-task" @submit="handleSubmit">
-		<!-- Title -->
+		<!-- New task title -->
 		<div class="add-task__group">
 			<div class="icon">
 				<font-icon icon="fa-solid fa-list" />
@@ -13,7 +13,8 @@
 				required
 			/>
 		</div>
-		<!-- Description -->
+
+		<!-- New task description -->
 		<div class="add-task__group">
 			<div class="icon">
 				<font-icon icon="fa-solid fa-list" />
@@ -26,7 +27,8 @@
 				required
 			/>
 		</div>
-		<!-- Submit form -->
+
+		<!-- Submit button -->
 		<button class="submit" type="submit" title="Add task">
 			<font-icon icon="fa-solid fa-plus-circle" /> Create
 		</button>
@@ -49,12 +51,14 @@ export default {
 	},
 	methods: {
 		handleSubmit(e) {
+			//  The new task object
 			const newTask = {
 				id: uuidv4(),
 				title: this.title,
 				description: this.description,
 			};
 			e.preventDefault();
+			
 			// Check data and emits it up
 			if (newTask.title.length > 0 && newTask.description.length > 0) {
 				console.log("Add new task", newTask);

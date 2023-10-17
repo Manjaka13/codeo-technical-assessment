@@ -1,7 +1,10 @@
 <template>
 	<div class="task-list">
+		<!-- Tasklist head -->
 		<div class="task-list__head">
+			<!-- Title -->
 			<h1 class="title"><font-icon icon="fa-solid fa-list" /> Ongoing tasks</h1>
+			<!-- Cancel new task -->
 			<button
 				v-if="addingTask"
 				class="cancel"
@@ -10,6 +13,7 @@
 			>
 				<font-icon icon="fa-solid fa-times-circle" /> Cancel
 			</button>
+			<!-- New task -->
 			<button
 				v-if="!addingTask && !loading"
 				class="add"
@@ -19,25 +23,26 @@
 				<font-icon icon="fa-solid fa-plus-circle" /> Add new task
 			</button>
 		</div>
+
+		<!-- Add task component -->
 		<add-task v-if="addingTask" @add="addTask" />
+
 		<div v-if="loading || taskList.length === 0" class="task-list__container">
 			<!-- When loading -->
 			<div v-if="loading" class="task-list__box">
 				<loading-spinner />
 				<p class="info-text">Loading, please wait...</p>
 			</div>
-			<!-- When there is an error -->
-			<!-- <div v-if="error" class="task-list__box">
-				<p v-if="error" class="info-error">{{ error }}</p>
-			</div> -->
 			<!-- When list is empty -->
 			<div v-if="!loading && taskList.length === 0" class="task-list__box">
 				<p class="info-text">Task list is empty</p>
 			</div>
 		</div>
+
 		<!-- Rendering our task list -->
 		<ul v-if="!loading && taskList.length > 0" class="task-list__list">
 			<li v-for="(task, key) in taskList" :key="key">
+				<!-- Use task-item to render each element -->
 				<task-item
 					:id="key"
 					:title="task.title"
@@ -69,7 +74,7 @@ export default {
 	created() {
 		this.$store.dispatch("fetchTaskList");
 	},
-	// Computed values
+	// Data getters
 	computed: {
 		taskList() {
 			return this.$store.getters.getTaskList;

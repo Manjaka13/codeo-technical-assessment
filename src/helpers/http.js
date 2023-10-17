@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_ENDPOINT } from "@/helpers/const.js";
+import { GET_ENDPOINT, NETWORK_LATENCY } from "@/helpers/const.js";
 
 /**
  * API call(s)
@@ -14,5 +14,5 @@ export const getTaskList = () =>
 				.get(GET_ENDPOINT)
 				.then(({ data }) => resolve(data))
 				.catch(({ message }) => reject(message));
-		}, 2000);
+		}, NETWORK_LATENCY);
 	});
