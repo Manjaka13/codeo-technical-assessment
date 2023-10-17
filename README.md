@@ -1,4 +1,4 @@
-# codeo-test-part1
+# codeo-technical-assessment
 
 Technical assessment for Codeo. Simple todolist with Vue3 and VueX 4
 
