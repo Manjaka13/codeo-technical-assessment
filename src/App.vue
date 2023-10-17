@@ -11,4 +11,8 @@
 <script setup>
 import FooterSection from "@/components/Page/FooterSection.vue";
 import NavBar from "@/components/Page/NavBar.vue";
+
+/**
+ * Component entry point
+ */
 </script>
