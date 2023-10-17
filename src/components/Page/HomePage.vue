@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import lottieHome from "@/assets/lottie-home.json";
+import lottieHome from "@/lotties/lottie-home.json";
 import { Vue3Lottie } from "vue3-lottie";
 
 export default {

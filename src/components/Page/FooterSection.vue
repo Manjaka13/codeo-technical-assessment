@@ -18,7 +18,7 @@
 
 <script>
 import { Vue3Lottie } from "vue3-lottie";
-import lottieCat from "@/assets/lottie-cat.json";
+import lottieCat from "@/lotties/lottie-cat.json";
 
 export default {
 	components: { Vue3Lottie },
