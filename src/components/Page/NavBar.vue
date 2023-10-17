@@ -1,10 +1,10 @@
 <template>
 	<nav class="nav-bar">
 		<ul class="nav-bar__list">
-			<li class="item" v-for="(link, key) in links" :key="key">
-				<router-link :to="link.link">
-					<a class="link" :title="link.title">
-						<font-icon class="icon" :icon="link.icon" />{{ link.name }}
+			<li class="item" v-for="(route, key) in routes" :key="key">
+				<router-link :to="route.link">
+					<a class="link" :title="route.title">
+						<font-icon class="icon" :icon="route.icon" />{{ route.name }}
 					</a>
 				</router-link>
 			</li>
@@ -14,30 +14,19 @@
 </template>
 
 <script>
+import { ROUTES } from "@/helpers/const.js";
+
 export default {
 	data() {
 		return {
-			links: [
-				{
-					name: "Home",
-					title: "To homepage",
-					link: "/",
-					icon: "fa-solid fa-home",
-				},
-				{
-					name: "Tasks",
-					title: "Tasklist",
-					link: "/tasks",
-					icon: "fa-solid fa-pencil-alt",
-				},
-				{
-					name: "Contacts",
-					title: "Contacts page",
-					link: "/contacts",
-					icon: "fa-solid fa-envelope",
-				},
-			],
+			routes: [],
 		};
+	},
+	created() {
+		this.routes = Object.keys(ROUTES).map((item) => ({
+			...ROUTES[item],
+			link: item,
+		}));
 	},
 };
 </script>

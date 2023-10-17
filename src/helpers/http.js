@@ -1,19 +1,17 @@
 import axios from "axios";
+import { GET_ENDPOINT } from "@/helpers/const.js";
 
 /**
  * API call(s)
  */
 
-const mockTaskListUrl =
-	"https://run.mocky.io/v3/65b6c189-5e26-4386-94c9-fcc95e396e3a";
-
 // Gets task list from run mocky
 export const getTaskList = () =>
 	new Promise((resolve, reject) => {
-        // I use setTimeout to simulate network latency (thus display our loading spinner)
+        // I use setTimeout to simulate network latency (thus displays our loading spinner)
 		setTimeout(() => {
 			axios
-				.get(mockTaskListUrl)
+				.get(GET_ENDPOINT)
 				.then(({ data }) => resolve(data))
 				.catch(({ message }) => reject(message));
 		}, 2000);

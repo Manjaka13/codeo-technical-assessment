@@ -44,6 +44,7 @@
 
 <script>
 import LoadingSpinner from "@/components/Page/LoadingSpinner.vue";
+import { sendMail } from "@/helpers/utils.js";
 
 export default {
 	components: { LoadingSpinner },
@@ -56,18 +57,21 @@ export default {
 		};
 	},
 	methods: {
+		// Submits message
 		handleSubmit(e) {
 			if (!this.loading) {
-				const payload = { email: this.email, message: this.message };
 				e.preventDefault();
-				console.log(payload);
 				this.loading = true;
-				setTimeout(() => {
-					this.loading = false;
-					this.email = "";
-					this.message = "";
-					this.success = "Your message was sent successfully !";
-				}, 2000);
+				// Fake sending mail :)
+				sendMail(this.email, this.message)
+					.then(() => {
+						this.success = "Your message was sent successfully !";
+					})
+					.finally(() => {
+						this.loading = false;
+						this.email = "";
+						this.message = "";
+					});
 			}
 		},
 	},

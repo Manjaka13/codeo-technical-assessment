@@ -1,6 +1,6 @@
 <template>
 	<form class="add-task" @submit="handleSubmit">
-        <!-- Title -->
+		<!-- Title -->
 		<div class="add-task__group">
 			<div class="icon">
 				<font-icon icon="fa-solid fa-list" />
@@ -13,7 +13,7 @@
 				required
 			/>
 		</div>
-        <!-- Description -->
+		<!-- Description -->
 		<div class="add-task__group">
 			<div class="icon">
 				<font-icon icon="fa-solid fa-list" />
@@ -26,10 +26,10 @@
 				required
 			/>
 		</div>
-        <!-- Submit form -->
+		<!-- Submit form -->
 		<button class="submit" type="submit" title="Add task">
-            <font-icon icon="fa-solid fa-plus-circle" /> Create
-        </button>
+			<font-icon icon="fa-solid fa-plus-circle" /> Create
+		</button>
 	</form>
 </template>
 
@@ -49,17 +49,20 @@ export default {
 	},
 	methods: {
 		handleSubmit(e) {
+			const newTask = {
+				id: uuidv4(),
+				title: this.title,
+				description: this.description,
+			};
 			e.preventDefault();
-            // Check data and emits it up
-			if (this.title.length > 0 && this.description.length > 0) {
-                const newTask = {
-					id: uuidv4(),
-					title: this.title,
-					description: this.description,
-				};
-                console.log("Add new task", newTask);
+			// Check data and emits it up
+			if (newTask.title.length > 0 && newTask.description.length > 0) {
+				console.log("Add new task", newTask);
 				this.$emit("add", newTask);
-            }
+				// Reset input fields
+				this.title = "";
+				this.description = "";
+			}
 		},
 	},
 };

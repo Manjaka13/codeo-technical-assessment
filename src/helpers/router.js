@@ -1,18 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from "@/components/Page/HomePage.vue";
-import ContactPage from "@/components/Page/ContactPage.vue";
-import TaskList from "@/components/Task/TaskList.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import { ROUTES } from "@/helpers/const.js";
 
 /**
  * Routing
  */
 
-const routes = [
-	{ path: "/", component: HomePage },
-	{ path: "/tasks", component: TaskList },
-	{ path: "/contacts", component: ContactPage },
-];
+// Build our routes
+let routes = [];
+Object.keys(ROUTES).forEach((item) =>
+	routes.push({ path: item, component: ROUTES[item].component })
+);
 
+// Create the router from it
 const router = createRouter({
 	history: createWebHistory("/"),
 	routes,

@@ -2,14 +2,14 @@
 	<footer class="footer">
 		<img
 			class="footer__avatar"
-			src="@/images/avatar-harijaona.jpg"
-			alt="Avatar Harijaona"
+			:src="candidate.avatar"
+			:alt="`Avatar ${candidate.name}`"
 		/>
 		<p class="footer__text">
 			Technical assessment made with ❤️ by
-			<a class="link" href="https://harij.vercel.app/" title="The candidate">
-				Harijaona</a
-			>.
+			<a class="link" :href="candidate.portfolio" title="The candidate">
+				{{ candidate.name }}
+			</a>.
 		</p>
 		<img class="footer__logo" src="@/images/logo-codeo.png" alt="Codeo logo" />
 		<Vue3Lottie class="lottie" :animationData="lottieCat" :height="100" />
@@ -18,6 +18,7 @@
 
 <script>
 import { Vue3Lottie } from "vue3-lottie";
+import { CANDIDATE } from "@/helpers/const.js";
 import lottieCat from "@/lotties/lottie-cat.json";
 
 export default {
@@ -25,6 +26,7 @@ export default {
 	data() {
 		return {
 			lottieCat,
+			candidate: CANDIDATE,
 		};
 	},
 };
