@@ -1,6 +1,7 @@
 import HomePage from "@/components/Page/HomePage.vue";
 import ContactPage from "@/components/Page/ContactPage.vue";
 import TaskList from "@/components/Task/TaskList.vue";
+import avatar from "@/images/avatar-harijaona.jpg";
 
 /**
  * Holds constants
@@ -35,7 +36,7 @@ export const ROUTES = {
 // Candidate info (me)
 export const CANDIDATE = {
 	name: "Harijaona",
-	avatar: "/src/images/avatar-harijaona.jpg",
+	avatar,
 	portfolio: "https://harij.vercel.app/",
 };
 
